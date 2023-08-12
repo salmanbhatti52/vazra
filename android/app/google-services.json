@@ -46,6 +46,13 @@
             {
               "client_id": "450399040998-o26r3ctt9decb1p17vkrnfsl9brhh3lu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "450399040998-upbf37fvhia505dbttepomjli0pqlana.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fibrechat.app"
+              }
             }
           ]
         }
