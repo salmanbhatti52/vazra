@@ -477,6 +477,7 @@ class LoginScreenState extends State<LoginScreen>
           }
         } else {
           String? fcmToken = await FirebaseMessaging.instance.getToken();
+          print('object'+fcmToken.toString());
           if (fcmToken != null) {
             await storage.write(
                 key: Dbkeys.privateKey, value: documents[0][Dbkeys.privateKey]);

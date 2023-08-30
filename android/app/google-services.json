@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "450399040998-id4v2a32uhqsl3t3315r7n4gedgsvopi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fibrechat.app",
+            "certificate_hash": "8918a24d20a792a9a2e71ff71640fe3efb40555a"
+          }
+        },
+        {
           "client_id": "450399040998-rnv497ed6ho4q684eamkr8beo3bbkbv9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -46,6 +54,13 @@
             {
               "client_id": "450399040998-o26r3ctt9decb1p17vkrnfsl9brhh3lu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "450399040998-upbf37fvhia505dbttepomjli0pqlana.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fibrechat.app"
+              }
             }
           ]
         }

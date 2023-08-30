@@ -47,6 +47,7 @@ class CallUtils {
 
       call.hasDialled = true;
       if (isvideocall == false) {
+        print("hiii");
         if (callMade) {
           await Navigator.push(
             context,

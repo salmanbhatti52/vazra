@@ -4464,6 +4464,7 @@ class _ChatScreenState extends State<ChatScreen>
                                                             context: context,
                                                             builder: (context) {
                                                               return Container(
+
                                                                   child: GridView
                                                                       .builder(
                                                                 itemCount:
@@ -4473,24 +4474,33 @@ class _ChatScreenState extends State<ChatScreen>
                                                                     crossAxisCount:
                                                                         2,
                                                                     crossAxisSpacing:
-                                                                        4.0,
+                                                                        10.0,
                                                                     mainAxisSpacing:
-                                                                        4.0),
+                                                                        10.0),
                                                                 itemBuilder:
                                                                     (BuildContext
                                                                             context,
                                                                         int index) {
                                                                   return GestureDetector(
-                                                                    child: Gif(
+                                                                    child: Container(
+                                                                      padding: EdgeInsets.symmetric(
+                                                                        horizontal:20,vertical:20,
+                                                                      ),
+
+
+                                                                      child:Gif(
+                                                                      height: 5,width: 5,
+
+                                                                      fit: BoxFit.scaleDown,
                                                                       image: NetworkImage(
-                                                                          '${linksGifs[index]}'),
+                                                                        '${linksGifs[index]}',),
                                                                       controller:
-                                                                          gifController, // if duration and fps is null, original gif fps will be used.
+                                                                      gifController, // if duration and fps is null, original gif fps will be used.
                                                                       //fps: 30,
                                                                       //duration: const Duration(seconds: 3),
                                                                       autostart:
-                                                                          Autostart
-                                                                              .no,
+                                                                      Autostart
+                                                                          .no,
                                                                       // placeholder: (context) => const Text('Loading...'),
                                                                       onFetchCompleted:
                                                                           () {
@@ -4499,7 +4509,7 @@ class _ChatScreenState extends State<ChatScreen>
                                                                         gifController
                                                                             ?.forward();
                                                                       },
-                                                                    ),
+                                                                    ),),
                                                                     onTap: () {
                                                                       if (gifController !=
                                                                               null &&

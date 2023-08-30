@@ -15,10 +15,10 @@ import 'package:fiberchat/Services/localization/language_constants.dart';
 import 'package:fiberchat/Utils/alias.dart';
 import 'package:fiberchat/Utils/chat_controller.dart';
 import 'package:fiberchat/Utils/color_detector.dart';
+import 'package:fiberchat/Utils/late_load.dart';
 import 'package:fiberchat/Utils/theme_management.dart';
 import 'package:fiberchat/Utils/unawaited.dart';
 import 'package:fiberchat/Utils/utils.dart';
-import 'package:fiberchat/Utils/late_load.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -478,7 +478,7 @@ Widget getPersonalMessageTile(
               lastMessage == {} || lastMessage == null
                   ? SizedBox()
                   : Padding(
-                      padding: const EdgeInsets.only(top: 2),
+                      padding: const EdgeInsets.only(top: 0),
                       child: Text(
                         getLastMessageTime(context, currentUserNo,
                             lastMessage[Dbkeys.timestamp]),

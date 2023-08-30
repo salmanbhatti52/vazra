@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'dart:io';
+
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -10,21 +11,20 @@ import 'package:fiberchat/Configs/Dbkeys.dart';
 import 'package:fiberchat/Configs/Dbpaths.dart';
 import 'package:fiberchat/Configs/app_constants.dart';
 import 'package:fiberchat/Configs/optional_constants.dart';
+import 'package:fiberchat/Models/call.dart';
 import 'package:fiberchat/Screens/homepage/homepage.dart';
 import 'package:fiberchat/Services/Providers/Observer.dart';
 import 'package:fiberchat/Services/Providers/call_history_provider.dart';
 import 'package:fiberchat/Services/localization/language_constants.dart';
-import 'package:fiberchat/Models/call.dart';
+import 'package:fiberchat/Utils/call_utilities.dart';
 import 'package:fiberchat/Utils/color_detector.dart';
 import 'package:fiberchat/Utils/setStatusBarColor.dart';
 import 'package:fiberchat/Utils/utils.dart';
 import 'package:fiberchat/widgets/Common/cached_image.dart';
-import 'package:fiberchat/Utils/call_utilities.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:logger/logger.dart';
 import 'package:permission_handler/permission_handler.dart';
-
 import 'package:pip_view/pip_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -82,6 +82,8 @@ class _AudioCallState extends State<AudioCall> {
   Stream<DocumentSnapshot>? stream;
   @override
   void initState() {
+    print("hoooooo");
+
     super.initState();
     initAgora();
     stream = FirebaseFirestore.instance
@@ -151,6 +153,7 @@ class _AudioCallState extends State<AudioCall> {
   bool isPickedup = false;
 
   Future<void> initAgora() async {
+    print("hiiiiiiiii");
     // retrieve permissions
     await [Permission.microphone, Permission.camera].request();
 

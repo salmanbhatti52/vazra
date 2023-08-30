@@ -294,7 +294,7 @@ class _SettingsOptionState extends State<SettingsOption> {
                                       ),
                               ),
                               onTap: () {
-                                // widget.onTapEditProfile();
+                                widget.onTapEditProfile();
                               },
                               contentPadding: EdgeInsets.fromLTRB(30, 3, 25, 3),
                               leading: Padding(
@@ -383,7 +383,7 @@ class _SettingsOptionState extends State<SettingsOption> {
                                   ),
                                 ))),
                             onTap: () {
-                              // widget.onTapEditProfile();
+                              widget.onTapEditProfile();
                             },
                             contentPadding: EdgeInsets.fromLTRB(30, 3, 25, 3),
                             leading: Padding(
